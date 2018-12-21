@@ -7,6 +7,7 @@ pelt1 = read.csv("PELT1.csv")
 pelt2 = read.csv("PELT2.csv")
 pelt3 = read.csv("PELT3.csv")
 pelt4 = read.csv("PELT4.csv")
+compiled = read.csv("pelts_compiled.csv")
 
 # Load libraries
 library(smoothr)
