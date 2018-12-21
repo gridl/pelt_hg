@@ -3,6 +3,10 @@
 # Written in R Version 3.5.0
 #############################################################################
 # Load data
+pelt1 = read.csv("PELT1.csv")
+pelt2 = read.csv("PELT2.csv")
+pelt3 = read.csv("PELT3.csv")
+pelt4 = read.csv("PELT4.csv")
 
 #Load Libraries
 library(ggplot2)
