@@ -9,18 +9,20 @@ pelt3 = read.csv("PELT3.csv")
 pelt4 = read.csv("PELT4.csv")
 
 
-# Library
+# Load Library
 library(ggplot2)
 library(Metrics)
 library(rgdal)
 library(dplyr)
+library(ggpubr)
+library(sjPlot)
 
-#ADD COLUMNS PREDICTING [ORGAN THg] from [Fur THg]####
-#Eccles et al. (2017) fur THg to organ THg predictive model eqns
-#Fur to brain: y = 0.15x + 0
-#Fur to kidney: y = 0.62x + 0
-#Fur to liver: y = 0.70x + 0
-#Fur to muscle: y = 0.46x + 0
+# Add column predicting [ORGAN THg] from [Fur THg]
+# Eccles et al. (2017) fur THg to organ THg predictive model eqns
+# Fur to brain: y = 0.15x + 0
+# Fur to kidney: y = 0.62x + 0
+# Fur to liver: y = 0.70x + 0
+# Fur to muscle: y = 0.46x + 0
 
 #######################################
 # Import Shapefiles
