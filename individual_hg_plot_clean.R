@@ -13,6 +13,8 @@ library(spdep)
 library(rgdal)
 library(dplyr)
 library(ggplot2)
+library(ggpubr)
+library(sjPlot)
 
 #############################################################################
 # Plot 1
@@ -125,7 +127,6 @@ p4_UC = ggplot(p4_shp_df, aes(x = p4_shp_df$long, y = p4_shp_df$lat)) +
 
 #############################################################################
 # Plot all figures together
-library(ggpubr)
 plot1=ggarrange(p1_TC, p1_UC, p2_TC, p2_UC,p3_TC, p3_UC,p4_TC, p4_UC,
           labels = c("Pelt 1 TC", "Pelt 1 UC", "Pelt 2 TC", "Pelt 2 UC", "Pelt 3 TC", "Pelt 3 UC","Pelt 4 TC", "Pelt 4 UC"),
           vjust = 1,
