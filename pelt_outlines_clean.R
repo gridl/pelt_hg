@@ -131,5 +131,5 @@ points(coords)
 #Write spatialpolygon to dataframe and then to shapefile
 df = data.frame(id = getSpPPolygonsIDSlots(comp_smooth))
 row.names(df) = getSpPPolygonsIDSlots(comp_smooth)
-comp_spdf <- SpatialPolygonsDataFrame(comp_smooth, data =df)
+comp_spdf = SpatialPolygonsDataFrame(comp_smooth, data =df)
 writeOGR(comp_spdf, dsn = "C:/Users/keccl081/Dropbox/pelt", driver="ESRI Shapefile", layer = "Comp_Outline_2")
