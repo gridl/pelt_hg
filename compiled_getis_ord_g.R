@@ -5,6 +5,7 @@
 # Load data
 compiled = read.csv("pelts_compiled.csv")
 
+# Load Libraries
 library(ggplot2)
 library(ggspatial)
 library(dplyr)
@@ -13,6 +14,8 @@ library(rgeos)
 library(smoothr)
 library(sp)
 library(rgdal)
+library(ggpubr)
+library(sjPlot)
 
 ################################
 # Importshapefile
@@ -118,7 +121,6 @@ hs_comp_UC = ggplot(comp_shp_df, aes(x = comp_shp_df$long, y = comp_shp_df$lat))
 
 ###################################################
 # Plot composite figures together
-library(ggpubr)
 plot1=ggarrange(comp_TC, comp_UC,
           labels = c("Compiled TC", "Compiled UC"),
           vjust = 1,
