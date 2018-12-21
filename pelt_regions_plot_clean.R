@@ -159,6 +159,4 @@ plot2=ggarrange(p1_ana, p2_ana, p3_ana, p4_ana,
                 legend = "bottom")
 
 #Plot figures with dpi=300
-save_plot("anatomical_region.tif", plot2, width = 30, height = 20, dpi = 300,
-          legend.textsize = 20, legend.titlesize = 20,
-          legend.itemsize = 20)
+save_plot("anatomical_region.tif", plot2, width = 30, height = 20, dpi = 300)
