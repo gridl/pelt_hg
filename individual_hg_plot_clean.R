@@ -135,6 +135,4 @@ plot1=ggarrange(p1_TC, p1_UC, p2_TC, p2_UC,p3_TC, p3_UC,p4_TC, p4_UC,
           legend = "right")
 
 #Plot figures with dpi=300
-save_plot("individual_hg.tif", plot1, width = 20, height = 20, dpi = 300,
-          legend.textsize = 20, legend.titlesize = 20,
-          legend.itemsize = 20)
+save_plot("individual_hg.tif", plot1, width = 20, height = 20, dpi = 300)
