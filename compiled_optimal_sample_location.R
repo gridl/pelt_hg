@@ -5,7 +5,7 @@
 # Load data
 compiled = read.csv("pelts_compiled.csv")
 
-# Library
+# Load Library
 library(ggplot2)
 library(Metrics)
 library(rgdal)
@@ -18,6 +18,8 @@ library(sp)
 library(spdep)
 library(gridExtra)
 library(adespatial)
+library(ggpubr)
+library(sjPlot)
 
 #Eccles et al. (2017) fur THg to organ THg predictive model eqns
 #Fur to brain: y = 0.15x + 0
