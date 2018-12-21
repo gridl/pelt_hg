@@ -1,8 +1,12 @@
 #############################################################################
-# Statistics for Pelt 4
+# Statistics for composite pelt and comparisons
 # Written in R Version 3.5.0
 #############################################################################
 # Load data
+pelt1 = read.csv("PELT1.csv")
+pelt2 = read.csv("PELT2.csv")
+pelt3 = read.csv("PELT3.csv")
+pelt4 = read.csv("PELT4.csv")
 compiled = read.csv("pelts_compiled.csv")
 
 # Load Libraries
@@ -30,6 +34,33 @@ t.test(compiled$THg_TC, compiled$THg_UC, paired = TRUE, var.equal = FALSE,
        alternative = "two.sided")
 shapiro.test((compiled$THg_TC-compiled$THg_UC)) # Differences Not normal
 hist(compiled$THg_TC-compiled$THg_UC) # Differences Approximately normal
+
+#### Comparison of Ranges of TC and UC #####
+par(mfrow=c(2,2))
+# Create boxplots with whiskers as ranges
+pelt1_stack=stack(pelt1[,7:8])
+box_p1=boxplot(pelt1_stack$values ~ pelt1_stack$ind, range = 0, 
+        names=c("TC", "UC"),
+        ylab = "THg concentration (ppm)",
+        xlab = " Pelt 1")
+
+pelt2_stack=stack(pelt2[,7:8])
+box_p2=boxplot(pelt2_stack$values ~ pelt2_stack$ind, range = 0, 
+               names=c("TC", "UC"),
+               ylab = "THg concentration (ppm)",
+               xlab = " Pelt 2")
+
+pelt3_stack=stack(pelt3[,7:8])
+box_p3=boxplot(pelt3_stack$values ~ pelt3_stack$ind, range = 0, 
+               names=c("TC", "UC"),
+               ylab = "THg concentration (ppm)",
+               xlab = " Pelt 3")
+
+pelt4_stack=stack(pelt4[,7:8])
+box_p4=boxplot(pelt4_stack$values ~ pelt4_stack$ind, range = 0, 
+               names=c("TC", "UC"),
+               ylab = "THg concentration (ppm)",
+               xlab = " Pelt 4")
 
 #### Variance between TC and UC ####
 # Calculate absolute ranges
