@@ -2,7 +2,12 @@
 # Create pelt outlines
 # Written in R Version 3.5.0
 #############################################################################
-# Import data with xy coordinates
+# Load Libraries
+pelt1 = read.csv("PELT1.csv")
+pelt2 = read.csv("PELT2.csv")
+pelt3 = read.csv("PELT3.csv")
+pelt4 = read.csv("PELT4.csv")
+
 # Load libraries
 library(smoothr)
 library(rgeos)
