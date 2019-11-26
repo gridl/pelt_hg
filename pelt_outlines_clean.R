@@ -1,6 +1,8 @@
 #############################################################################
 # Create pelt outlines
 # Written in R Version 3.5.0
+
+# This script must be run first
 #############################################################################
 # Load Libraries
 pelt1 = read.csv("PELT1.csv")
