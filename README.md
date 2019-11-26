@@ -10,4 +10,4 @@ Fur is a common biomarker of environmental mercury (Hg) exposure. Further, there
 # Notes
 ### Order to Run
 
-pelt_outlines_clean.R must be run first to obtain the outlines needded for figures
+pelt_outlines_clean.R must be run first to obtain the outlines needed for figures
